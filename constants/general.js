@@ -1,0 +1,15 @@
+export const general = [
+  "Git-GitFlow",
+  "Jira",
+  "CORS",
+  "REST API",
+  "HTTP",
+  "OOP",
+  "SOLID",
+  "MVC",
+  "Figma",
+  "Webpack",
+  "GraphQL",
+  "Microservices",
+  "AWS",
+];
