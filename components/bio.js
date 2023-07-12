@@ -25,6 +25,6 @@ export const BioCard = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background: #2f3239;
+  background: ${(props) => props.bg || "#2f3239"};
   border: 1px solid rgba(188, 202, 235, 0.4);
 `;

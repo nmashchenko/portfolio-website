@@ -1,7 +1,7 @@
 {
 	"name": "portfolio",
 	"version": "1.0.0",
-	"description": "Sivritkin's website",
+	"description": "Mashchenko's website",
 	"main": "index.js",
 	"scripts": {
 		"dev": "next dev -H 0.0.0.0",
@@ -10,7 +10,7 @@
 		"lint": "next lint"
 	},
 	"keywords": [],
-	"author": "Sivritkin Dmitriy<dmitriysivritkin@gmail.com>",
+	"author": "Nikita Mashchenko<mashchenko1@icloud.com>",
 	"license": "MIT",
 	"dependencies": {
 		"@chakra-ui/icons": "^2.0.19",
@@ -22,8 +22,10 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.10.1",
+		"react-particles": "^2.10.1",
 		"react-type-animation": "^3.1.0",
-		"three": "^0.153.0"
+		"three": "^0.153.0",
+		"tsparticles": "^2.10.1"
 	},
 	"devDependencies": {
 		"eslint": "^8.43.0",

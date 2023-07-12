@@ -15,9 +15,9 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { forwardRef } from "react";
-// import { IoLogoGithub } from "react-icons/io5";
 import Logo from "./logo";
 import ThemeToggleButton from "./theme-toggle-button";
+import { IoLogoGithub } from "react-icons/io5";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -64,7 +64,7 @@ const NavBar = (props) => {
         maxW="container.md"
         flexWrap="wrap"
         align="center"
-        justifyContent="space-between"
+        justifyContent="center"
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={"tighter"}>
@@ -85,9 +85,9 @@ const NavBar = (props) => {
           <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
-          {/* <LinkItem
+          <LinkItem
             target="_blank"
-            href="https://github.com/velenyx/fullman-homepage"
+            href="https://github.com/exortme1ster/portfolio-website"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -96,7 +96,7 @@ const NavBar = (props) => {
           >
             <IoLogoGithub />
             Source
-          </LinkItem> */}
+          </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">

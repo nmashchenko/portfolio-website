@@ -1,5 +1,5 @@
 export const languages = [
-  "Urkainian(Native)",
+  "Ukrainian(Native)",
   "English(Advanced)",
   "French(Intermediate)",
 ];
