@@ -1,6 +1,7 @@
 import { Link, Text, useColorModeValue } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import FootprintIcon from "./icons/footprint";
+import { useRouter } from "next/router";
+import VSCodeIcon from "../../assets/icons/vscode";
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -22,10 +23,12 @@ const LogoBox = styled.span`
 `;
 
 const Logo = () => {
+  const router = useRouter();
+
   return (
-    <Link href="/" scroll={false}>
+    <Link onClick={() => router.push("/")}>
       <LogoBox>
-        <FootprintIcon />
+        <VSCodeIcon />
         <Text
           color={useColorModeValue("gray.800", "whiteAlpha.900")}
           // fontFamily='M PLUS Rounded 1c", sans-serif'

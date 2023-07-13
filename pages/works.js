@@ -1,48 +1,41 @@
-import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
-import React from 'react'
-import { WorkGridItem } from '../components/grid-item'
-import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import {
-	default as reactPizzaSrc,
-	default as thumbFarfor,
-} from '../public/images/works/react-pizza.png'
+import { Box, Container } from "@chakra-ui/react";
+import React from "react";
+import { WorkItem } from "../components/WorkItem/WorkItem";
+import Layout from "../layouts/page";
+
+import { projects } from "../constants/projects";
 const Works = () => (
-	<Layout title='Works'>
-		<Container>
-			<Heading as='h3' fontSize={20} mb={4}>
-				Works
-			</Heading>
+  <Layout title="Works">
+    <Container
+      minHeight="calc(100dvh - 127px)"
+      width="100%"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      flexDirection="column"
+      maxWidth="none"
+      padding="30px 0 30px 0"
+    >
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        gap="20px"
+        justifyContent="center"
+        alignItems="center"
+      >
+        {projects.map((project, index) => (
+          <WorkItem
+            id="teameights"
+            title={project.title}
+            description={project.description}
+            technologies={project.technologies}
+            thumbnail={project.image}
+            key={index}
+          />
+        ))}
+      </Box>
+    </Container>
+  </Layout>
+);
 
-			<SimpleGrid columns={[1, 1, 2]} gap={6}>
-				<Section>
-					<WorkGridItem
-						id='react-pizza'
-						title='React Pizza'
-						thumbnail={reactPizzaSrc}
-					>
-						Online shop for sell pizzas
-					</WorkGridItem>
-				</Section>
-				<Section>
-					<WorkGridItem id='farfor' title='Farfor' thumbnail={thumbFarfor}>
-						A FullStack online shop for commercial production
-					</WorkGridItem>
-				</Section>
-			</SimpleGrid>
-
-			<Heading as='h3' fontSize={20} mb={4}>
-				Collaborations
-			</Heading>
-			<SimpleGrid columns={[1, 1, 2]} gap={6}>
-				<Section>
-					<WorkGridItem id='farfor' title='Farfor' thumbnail={thumbFarfor}>
-						A FullStack online shop for commercial production
-					</WorkGridItem>
-				</Section>
-			</SimpleGrid>
-		</Container>
-	</Layout>
-)
-
-export default Works
+export default Works;

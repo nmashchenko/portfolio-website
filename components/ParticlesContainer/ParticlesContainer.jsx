@@ -12,9 +12,12 @@ const ParticlesContainer = () => {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
-    container.loadTheme(colorMode);
-  }, []);
+  const particlesLoaded = useCallback(
+    async (container) => {
+      container.loadTheme(colorMode);
+    },
+    [colorMode]
+  );
 
   const options = {
     fullScreen: {
@@ -57,13 +60,13 @@ const ParticlesContainer = () => {
         },
       },
       number: {
-        value: 200,
+        value: 150,
       },
       color: {
         value: "#fff",
         animation: {
           enable: false,
-          speed: 20,
+          speed: 2,
           sync: true,
         },
       },
@@ -121,7 +124,7 @@ const ParticlesContainer = () => {
           value: 70,
         },
         move: {
-          speed: 12,
+          speed: 10,
           outModes: {
             default: "none",
             right: "destroy",

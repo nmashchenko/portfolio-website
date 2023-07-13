@@ -13,11 +13,12 @@ import {
   Stack,
   useColorModeValue,
 } from "@chakra-ui/react";
+
 import NextLink from "next/link";
 import { forwardRef } from "react";
-import Logo from "./logo";
-import ThemeToggleButton from "./theme-toggle-button";
+import ThemeToggleButton from "../../components/ThemeToggle/ThemeToggle";
 import { IoLogoGithub } from "react-icons/io5";
+import Logo from "../Logo/Logo";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -56,6 +57,7 @@ const NavBar = (props) => {
       bg={useColorModeValue("#ffffff40", "#20202380")}
       backdropFilter={"blur(10px)"}
       zIndex={1}
+      transform="translateZ(300px)"
       {...props}
     >
       <Container

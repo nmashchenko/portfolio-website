@@ -1,11 +1,11 @@
 import { Box, Container } from "@chakra-ui/react";
 import Head from "next/head";
-import Footer from "../footer";
-import NavBar from "../navbar";
+import Footer from "../components/Footer/Footer";
+import NavBar from "../components/Navbar/Navbar";
 
 const Main = ({ children, router }) => {
   return (
-    <Box as="main" pb={8}>
+    <Box as="main">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Mashchenko's homepage" />
@@ -18,7 +18,7 @@ const Main = ({ children, router }) => {
 
       <NavBar path={router.asPath} />
 
-      <Container maxWidth="container.md" pt={14}>
+      <Container maxWidth="none" pt={14}>
         {children}
         <Footer />
       </Container>
