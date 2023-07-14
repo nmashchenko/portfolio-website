@@ -30,6 +30,7 @@ const Works = () => (
             description={project.description}
             technologies={project.technologies}
             thumbnail={project.image}
+            link={project.link}
             key={index}
           />
         ))}

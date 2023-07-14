@@ -11,6 +11,7 @@ export const WorkItem = ({
   description,
   thumbnail,
   technologies,
+  link,
 }) => {
   const descriptionColor = useColorModeValue("#000", "#AAA6C3");
   const titleColor = useColorModeValue("#000", "#fff");
@@ -36,6 +37,8 @@ export const WorkItem = ({
           display="flex"
           flexDir="column"
           gap="20px"
+          cursor={"pointer"}
+          onClick={() => window.open(link, "_blank")}
         >
           <Image
             src={thumbnail}

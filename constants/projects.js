@@ -9,6 +9,7 @@ export const projects = [
       "Web-based platform for student developers to find each other and work together on pet projects, tournaments between teams, duels between members, mentorships, AI code review and more.",
     technologies: ["react", "mongodb", "nestjs"],
     image: teameights,
+    link: "https://teameights.com",
   },
   {
     title: "Candy Market",
@@ -16,6 +17,7 @@ export const projects = [
       "A serverless candy marketplace providing real-time updates. With a sleek interface, we cater to candy enthusiasts by offering a diverse range of delectable treats. Award-winning project, born out of a hackathon",
     technologies: ["react", "postgresql", "supabase"],
     image: candymarket,
+    link: "https://github.com/exortme1ster/HackathonNovember",
   },
   {
     title: "JeAuto",
