@@ -14,6 +14,8 @@ export default function CurrentSong() {
   const fetcher = (url) => fetch(url).then((r) => r.json());
   const { data } = useSWR("/api/spotify", fetcher);
 
+  console.log(data);
+
   const titleColor = useColorModeValue("#000", "rgba(255, 255, 255, 0.7)");
   const artistColor = useColorModeValue("#000", "#fff");
   const border = useColorModeValue("#22c35e 1px solid", "#90edb3 1px solid");

@@ -1,5 +1,4 @@
 import { Box, Button, Container, Heading, Text } from "@chakra-ui/react";
-import NextLink from "next/link";
 import Layout from "../layouts/page";
 import { useRouter } from "next/router";
 const NotFound = () => {
