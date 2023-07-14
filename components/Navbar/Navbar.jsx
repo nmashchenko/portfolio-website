@@ -27,7 +27,6 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
     <Link
       as={NextLink}
       href={href}
-      scroll={false}
       p={2}
       bg={active ? "grassTeal" : undefined}
       borderRadius={10}

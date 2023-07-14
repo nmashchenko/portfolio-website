@@ -1,25 +1,31 @@
-import {
-	Box,
-	Button,
-	Container,
-	Divider,
-	Heading,
-	Text,
-} from '@chakra-ui/react'
-import NextLink from 'next/link'
+import { Box, Button, Container, Heading, Text } from "@chakra-ui/react";
+import NextLink from "next/link";
+import Layout from "../layouts/page";
+import { useRouter } from "next/router";
 const NotFound = () => {
-	return (
-		<Container>
-			<Heading as='h1'>Not Found</Heading>
-			<Text>The page you&apos;re looking for was not found</Text>
-			<Divider my={6} />
-			<Box my={6} align='center'>
-				<NextLink href={'/'}>
-					<Button colorScheme='teal'>Return to home</Button>
-				</NextLink>
-			</Box>
-		</Container>
-	)
-}
+  const router = useRouter();
 
-export default NotFound
+  return (
+    <Layout title={"404"}>
+      <Container
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        flexDir={"column"}
+      >
+        <Heading as="h1" mb="3">
+          Not Found
+        </Heading>
+        <Text>The page you&apos;re looking for was not found</Text>
+        {/* <Divider my={6} /> */}
+        <Box my={6} align="center">
+          <Button colorScheme="teal" onClick={() => router.push("/")}>
+            Return to home
+          </Button>
+        </Box>
+      </Container>
+    </Layout>
+  );
+};
+
+export default NotFound;
