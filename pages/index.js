@@ -13,7 +13,7 @@ import { Links } from "../components/Links/Links";
 const Page = () => {
   return (
     <>
-      <Layout>
+      <Layout title="Home">
         <Container display="flex" flexDirection={"column"} gap="20px" mt="15">
           <Profile />
           <TypingAnimation />
