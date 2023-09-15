@@ -17,7 +17,7 @@ export const projects = [
       "A serverless candy marketplace providing real-time updates. With a sleek interface, we cater to candy enthusiasts by offering a diverse range of delectable treats. Award-winning project, born out of a hackathon",
     technologies: ["react", "postgresql", "supabase"],
     image: candymarket,
-    link: "https://github.com/exortme1ster/HackathonNovember",
+    link: "https://github.com/nmashchenko/HackathonNovember",
   },
   {
     title: "JeAuto",
